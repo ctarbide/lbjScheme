@@ -635,7 +635,7 @@ complex? number?
   (letrec ((next
              (lambda (n)
                (cons n (delay (next (+ n 1)))))))
-    (next 0)))               
+    (next 0)))
 (define head car)
 (define tail
   (lambda (stream) (force (cdr stream))))
@@ -705,4 +705,3 @@ complex? number?
 (test "6.5" (let ((f (eval '(lambda (f x) (f x x)) (null-environment 5)))) (f + 10)) 20)
 
 ; TODO: When executing a file or REPL script, make sure all parens are matched. Stop on first error!
-

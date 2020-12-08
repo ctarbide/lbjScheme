@@ -1,3 +1,8 @@
-bin
-build
-r5rs.pdf
+*~
+/bin
+/build
+/r5rs.pdf
+/target
+/.classpath
+/.settings
+/.project

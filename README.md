@@ -33,23 +33,11 @@ otherwise in the respective file.
 Make sure you have the following installed on your system:
 
 * A working [JDK 1.7 or higher](http://openjdk.java.net/)
-* [Apache Ant](http://ant.apache.org)
+* [Apache Maven](https://maven.apache.org/)
 
-Download the .zip file, extract and run Ant in the extracted folder. Once
-Ant has finished building and testing lbjScheme, you will find the
-generated .jar file in the build/jar folder.
-
-Alternatively, you can import the project into
-[Eclipse](http://eclipse.org/) and build/test from there.
-
-## JUnit
-
-The git repo contains the JUnit 4 .jar file. Building lbjScheme with
-Ant will use it to run all unit and integration tests during the build
-process.  Legalese: JUnit is included ONLY to make testing as easy as
-possible. I am not connected to the JUnit project in any other way. You
-can download the sources and possibly newer releases from
-[the JUnit repo on GitHub](https://github.com/junit-team/junit).
+Download the .zip file, extract and run "mvn package" in the extracted
+folder. Once Maven has finished building and testing lbjScheme, you
+will find the generated .jar file in the target folder.
 
 ## FAQ
 
@@ -71,15 +59,15 @@ A: Not my primary concern. At the moment, this is a very simple interpreter with
    no performance optimizations so I can keep the code clean and simple. The
    next evaluator will be a compiler though, and maybe I'll add a JVM bytecode
    backend, too. Let's see. First thing is to get lbjScheme R5RS compliant.
-   
+
 Q: Is there a console REPL?
 
-A: The .jar file, when started via "java -jar lbjScheme.jar", will open a GUI
-   window or start a console REPL depending on where it was started from.
+A: The .jar file, when started via "java -jar target/lbjscheme.jar", will open a
+   GUI window or start a console REPL depending on where it was started from.
    There are a few command line options for the console REPL that I'll refactor
    a bit in the near future so that the GUI will support them too, and add a
    force-console mode too. Nothing fancy yet.
-   
+
 Q: Why did you write this?
 
 A: Why not?
@@ -101,4 +89,3 @@ A: This is my Scheme interpreter. There are many like it, but this one is mine.
    compiler for it. And Scheme is one of the few languages out there that manage
    to be both powerful and simple, so the concepts you learn in the process of
    implementing Scheme change how you think about programming in general.
-
